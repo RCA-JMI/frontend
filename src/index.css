@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* css variables for the color theme and text color */
+  --color-primary: #05cbf7;
+  --primary-text-color: #05cbf7;
+  --secondary-text-color: #6a7280;
+  --tertiary-text-color: #141f1d;
+  --background-color: #e3e6ea;
+  --main-color: #fff;
+  --shadow-color: #d1d5db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
