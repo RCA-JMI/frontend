@@ -1,9 +1,23 @@
-import "./App.css";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/footer";
+import Navbar from "./components/navbar/navbar.component";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Results from "./pages/Results";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
     <div className="">
-      <h1>RCA Website</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/results" element={<Results />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
