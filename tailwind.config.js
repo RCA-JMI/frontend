@@ -8,6 +8,8 @@ export default {
     extend: {
       backgroundImage:{
         'home-main-img': "url('/src/assets/home/main.webp')",
+        'home-facility-img': "url('/src/assets/home/facility.webp')",
+
       }
     },
   },
