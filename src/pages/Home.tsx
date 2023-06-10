@@ -1,8 +1,17 @@
 import { AiFillRightCircle, AiOutlineGlobal } from "react-icons/ai";
-import { BsArrowRight } from "react-icons/bs";
-import { FaBook, FaSchool, FaThumbsUp } from "react-icons/fa";
+import {
+  BsArrowRight,
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsTelephoneFill,
+  BsTwitter,
+  BsYoutube,
+} from "react-icons/bs";
+import { FaBook, FaLocationArrow, FaSchool, FaThumbsUp } from "react-icons/fa";
 import { IoMdSchool } from "react-icons/io";
 import { IoRibbonSharp, IoTrophySharp } from "react-icons/io5";
+import { MdEmail, MdLocationOn } from "react-icons/md";
 import Container from "../components/container/container.component";
 
 import booksImg from "../assets/home/books-facility.webp";
@@ -394,6 +403,7 @@ const Home = () => {
         </Container>
       </section>
 
+      {/* blogs and resources */}
       <Container>
         <section className="flex flex-col items-center justify-center my-12">
           <h1 className="mb-4 text-3xl font-[500] text-[color:var(--primary-text-color)]">
@@ -405,21 +415,169 @@ const Home = () => {
             Examination. These are aligned to the demands of UPSC prelims, mains
             and complimented with previous years question papers.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4">
-            <div className="">
-              <h1>How to Start Preperation</h1>
-              <p className="text-sm">
+          <div className="grid gap-6 px-6 mt-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-[500]">How to Start Preperation</h1>
+              <p className="mt-2 text-sm">
                 Worried about How to start UPSC exam preparation? Read our
                 Beginner guide to get start.
               </p>
               <Link
                 to="/"
-                className="flex items-center justify-center gap-1 text-blue-700"
+                className="flex items-center gap-1 mt-1 text-sm text-blue-700"
               >
-                Learn more <AiFillRightCircle className="text-blue-700 " />
+                Learn more
+                <AiFillRightCircle className="text-sm text-blue-700" />
+              </Link>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-[500]">How to Start Preperation</h1>
+              <p className="mt-2 text-sm">
+                Worried about How to start UPSC exam preparation? Read our
+                Beginner guide to get start.
+              </p>
+              <Link
+                to="/"
+                className="flex items-center gap-1 mt-1 text-sm text-blue-700"
+              >
+                Learn more
+                <AiFillRightCircle className="text-sm text-blue-700" />
+              </Link>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-[500]">How to Start Preperation</h1>
+              <p className="mt-2 text-sm">
+                Worried about How to start UPSC exam preparation? Read our
+                Beginner guide to get start.
+              </p>
+              <Link
+                to="/"
+                className="flex items-center gap-1 mt-1 text-sm text-blue-700"
+              >
+                Learn more
+                <AiFillRightCircle className="text-sm text-blue-700" />
+              </Link>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-[500]">How to Start Preperation</h1>
+              <p className="mt-2 text-sm">
+                Worried about How to start UPSC exam preparation? Read our
+                Beginner guide to get start.
+              </p>
+              <Link
+                to="/"
+                className="flex items-center gap-1 mt-1 text-sm text-blue-700"
+              >
+                Learn more
+                <AiFillRightCircle className="text-sm text-blue-700" />
+              </Link>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-[500]">How to Start Preperation</h1>
+              <p className="mt-2 text-sm">
+                Worried about How to start UPSC exam preparation? Read our
+                Beginner guide to get start.
+              </p>
+              <Link
+                to="/"
+                className="flex items-center gap-1 mt-1 text-sm text-blue-700"
+              >
+                Learn more
+                <AiFillRightCircle className="text-sm text-blue-700" />
+              </Link>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-[500]">How to Start Preperation</h1>
+              <p className="mt-2 text-sm">
+                Worried about How to start UPSC exam preparation? Read our
+                Beginner guide to get start.
+              </p>
+              <Link
+                to="/"
+                className="flex items-center gap-1 mt-1 text-sm text-blue-700"
+              >
+                Learn more
+                <AiFillRightCircle className="text-sm text-blue-700" />
               </Link>
             </div>
           </div>
+        </section>
+      </Container>
+
+      {/* contact us */}
+      <section className="w-full py-12 bg-home-contact-img bg-cover bg-[50%] bg-no-repeat flex justify-center flex-col p-10 md:items-center">
+        <Container className="flex items-center justify-center">
+          <div className="w-0 md:w-1/2"></div>
+          <div className="flex flex-col text-white">
+            <h2 className="text-3xl font-[500]">Contact Information</h2>
+            <p className="flex flex-wrap mt-6">
+              <strong className="flex items-center gap-1">
+                <MdLocationOn />
+                Adresss : &nbsp;
+              </strong>
+              Jamia Nagar New Delhi, India
+            </p>
+            <p className="flex flex-wrap mt-4">
+              <strong className="flex items-center gap-1">
+                <BsTelephoneFill />
+                Telephone : &nbsp;
+              </strong>
+              011-26981717, 26984617, 26984658
+            </p>
+
+            <p className="flex flex-wrap mt-4">
+              <strong className="flex items-center gap-1">
+                <MdEmail />
+                Email : &nbsp;
+              </strong>
+              jmirca@gmail.com
+            </p>
+            <p className="flex flex-wrap mt-4">
+              <strong className="flex items-center gap-1">
+                <FaLocationArrow />
+                Location : &nbsp;
+              </strong>
+              <Link
+                to="https://www.google.com/maps/place/Centre+for+Coaching+and+Career+Planning/@28.5547121,77.2750214,16.02z/data=!4m10!1m2!2m1!1sJamia+rca!3m6!1s0x390ce38b551422e5:0x929eec49dd6be5f4!8m2!3d28.5552237!4d77.2830574!15sCglKYW1pYSByY2FaCyIJamFtaWEgcmNhkgEPY29hY2hpbmdfY2VudGVymgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU13ZVRkZldGTm5FQUXgAQA!16s%2Fg%2F124sx53q8?entry=ttu"
+                target="_blank"
+              >
+                &nbsp;Find Us on Google Map
+              </Link>
+            </p>
+            <p className="mt-8">Follow us on Social Media</p>
+            <div className="flex gap-4 mt-4">
+              <Link to="/">
+                <BsFacebook className="text-2xl" />
+              </Link>
+              <Link to="/">
+                <BsTwitter className="text-2xl" />
+              </Link>
+              <Link to="/">
+                <BsInstagram className="text-2xl" />
+              </Link>
+              <Link to="/">
+                <BsLinkedin className="text-2xl" />
+              </Link>
+              <Link to="/">
+                <BsYoutube className="text-2xl" />
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* enquiry */}
+      <Container>
+        <section className="flex flex-col items-center justify-center my-12">
+          <h1 className="mb-4 text-3xl font-[500] text-[color:var(--primary-text-color)]">
+            Request A Call Back
+          </h1>
+          <p className="mb-2 text-center">
+            If you have any query feel free to connect with us
+          </p>
+          <button className="px-6 py-2 mt-4 bg-[color:var(--primary-text-color)] text-white border-2 border-[color:var(--primary-color)] hover:text-[color:var(--primary-text-color)] hover:bg-white duration-300">
+            Get Enquiry Today
+          </button>
         </section>
       </Container>
     </div>

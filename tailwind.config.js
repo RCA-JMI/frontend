@@ -9,7 +9,7 @@ export default {
       backgroundImage:{
         'home-main-img': "url('/src/assets/home/main.webp')",
         'home-facility-img': "url('/src/assets/home/facility.webp')",
-
+        'home-contact-img':"url('/src/assets/home/contact.webp')",
       }
     },
   },
