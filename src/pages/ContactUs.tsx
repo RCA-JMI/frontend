@@ -1,19 +1,24 @@
-import { useEffect, useState } from "react";
+
+import {userSchema} from "./Validations/UserValidation.jsx"
+import {useForm} from "react-hook-form"
+
+import {yupResolver} from "@hookform/resolvers/yup"
 
 const ContactUs = () => {
-  const [user, setUser]=useState({
-    name: "",
-    mobileNumber: "",
-    email : "",
-    message : "",
-  });
-  useEffect(() => {});
   
-  function handleSubmit(event){
+  
+  const {register,handleSubmit,formState : {errors}} =useForm({
+    resolver : yupResolver(userSchema),
+  })
+  const createUser = (data) => {
     
-    // post
-
+   
+    console.log("submitted");
+    console.log(data);
+    
   }
+
+  
   
   return (
     <>
@@ -21,6 +26,7 @@ const ContactUs = () => {
         <div className="flex flex-no-wrap items-start">
           <div className="w-full ">
             <div className="py-10 px-20">
+            <form onSubmit={handleSubmit(createUser)}>
               <div className="bg-white rounded shadow mt-7 py-7">
                 
                   <div className="px-7 header flex bg-white  justify-start py-[30px] border-b-[2px] border-t-[2px] border-slate-100 flex-wrap gap-x-4 ">
@@ -64,32 +70,46 @@ const ContactUs = () => {
                     
                     
                     <div>
+                      
                       <p className="text-base font-medium leading-none text-gray-800">
                         Name <span className="text-red-600"> *</span>
                       </p>
-                      <input className="w-full p-2 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" />
-                      <p className="mt-3 text-xs leading-3 text-gray-600">
-                        Please use a legal name.
-                      </p>
+                      <input {...register("name")}className="w-full p-2 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                            name="name" />
+                      {errors.name ? (
+                        <span className="text-red-900 mt-3 text-xs leading-[15px]">{errors.name.message}</span>
+                          ) : (
+                                <></>
+                            )}
+                      
                     </div>
                     <div>
                       <p className="text-base font-medium leading-none text-gray-800">
                         Mobile number <span className="text-red-600"> *</span>
                       </p>
-                      <input className="w-full p-2 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" />
-                      <p className="mt-3 text-xs leading-[15px] text-gray-600">
-                        Please enter a valid mobile number.
-                      </p>
+                      <input {...register("mobileNumber")} className="w-full p-2 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                          name="mobileNumber" />
+
+                        {errors.mobileNumber ? (
+                        <span className="text-red-900 mt-3 text-xs leading-[15px]">{errors.mobileNumber.message}</span>
+                          ) : (
+                                <></>
+                            )}
+                     
                     </div>
 
                     <div>
                       <p className="text-base font-medium leading-none text-gray-800">
                         Email ID:  <span className="text-red-600"> *</span>
                       </p>
-                      <input className="w-full p-2 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" />
-                      <p className="mt-3 text-xs leading-[15px] text-gray-600">
-                        The above will be used for further contacts.
-                      </p>
+                      <input {...register("email")} className="w-full p-2 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" 
+                        name="email"/>
+                        {errors.email ? (
+                        <span className="text-red-900 mt-3 text-xs leading-[15px]">{errors.email.message}</span>
+                          ) : (
+                                <></>
+                            )}
+                      
                     </div>
                   </div>
                 </div>
@@ -100,23 +120,28 @@ const ContactUs = () => {
                   <div className="mt-5 border border-gray-300 rounded">
                     
                     <textarea
+                      {...register("message")}
                       className="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600"
                       placeholder="Start typing here ..."
                       defaultValue={" "}
+                      name="message"
                     />
+                    {errors.message ? (
+                        <span className="text-red-900 mt-3 text-xs leading-[15px]">{errors.message.message}</span>
+                          ) : (
+                                <></>
+                            )}
                   </div>
                 </div>
-                <p className="mt-3 text-xs leading-[15px] text-gray-600 px-7">
-                  Please describe your concerns. We will respond shortly.
-                </p>
+                
                 <hr className="h-[1px] bg-gray-100 my-14" />
 
                 
                 <div className="mt-2 flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
-
-                  <button onClick={handleSubmit} className="bg-[color:var(--primary-color)] rounded hover:bg-green-700 transform duration-300 ease-in-out text-sm font-medium px-5 py-3 text-white lg:max-w-[144px] w-full ">
-                    Submit
-                  </button>
+                  <input></input>
+                  <input type="submit"  className="bg-[color:var(--primary-color)] rounded hover:bg-green-700 transform duration-300 ease-in-out text-sm font-medium px-5 py-3 text-white lg:max-w-[144px] w-full ">
+                    
+                  </input>
                 </div>
 
               
@@ -134,10 +159,12 @@ const ContactUs = () => {
 
                   </p>
               </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+    
     </>
   );
 }
