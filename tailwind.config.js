@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'home-main-img': "url('/src/assets/home/main.webp')",
+        'home-facility-img': "url('/src/assets/home/facility.webp')",
+        'home-contact-img':"url('/src/assets/home/contact.webp')",
+      }
+    },
   },
   plugins: [],
 }
