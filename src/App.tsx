@@ -3,7 +3,8 @@ import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar.component";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import Results from "./pages/Results";
+import Results from "./pages/result/Results"
+// import Results from "./pages/Results2";
 import ContactUs from "./pages/ContactUs";
 
 function App() {
