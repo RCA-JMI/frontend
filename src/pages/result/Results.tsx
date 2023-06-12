@@ -5,7 +5,7 @@ import ResultFirst from './ResultFirst'
 
 const Results = () => {
   return (
-    <>
+    <div>
       <ResultFirst />
       <ResultGreen />
       <ResultWhite />
@@ -14,7 +14,7 @@ const Results = () => {
       <ResultGreen />
       <ResultWhite />
       <ResultGreen />
-    </>
+    </div>
   )
 }
 
