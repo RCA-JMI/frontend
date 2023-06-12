@@ -55,7 +55,7 @@ const ResultGreen = () => {
           </div>
           <Link
             to='/results'
-            className='flex flex-col items-center justify-center px-6 py-2 mt-4 bg-white text-[color:var(--primary-text-color)] border-2 border-[color:var(--primary-color)] hover:bg-[color:var(--primary-text-color)] hover:text-white duration-300'
+            className='flex flex-col items-center justify-center px-6 py-2 mt-4 bg-white text-[color:var(--primary-text-color)] border-2 border-white hover:bg-[color:var(--primary-text-color)] hover:text-white duration-300'
           >
             View other (IAS,IPS,IFS) Toppers
           </Link>
